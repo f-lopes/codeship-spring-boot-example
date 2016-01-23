@@ -1,8 +1,8 @@
-- name: test
+- name: build
   tag: master
-  service: springboot_example_test
-  command: mvn clean test
+  service: springboot_example_build
+  command: mvn clean package
 - name: build
   tag: master
   service: springboot_example_dist
-  command: mvn clean package
+  command: java -jar codeship-spring-boot-example.jar

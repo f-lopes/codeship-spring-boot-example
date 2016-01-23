@@ -1,4 +1,4 @@
-springboot_example_test:
+springboot_example_build:
   build:
     dockerfile_path: Dockerfile.build
   volumes:
@@ -6,6 +6,8 @@ springboot_example_test:
 springboot_example_dist:
   build:
     dockerfile_path: Dockerfile.dist
+  volumes_from:
+      - springboot_example_build
   environment:
     - spring.profiles.active=dev
     - server.port=8080
