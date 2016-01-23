@@ -1,0 +1,9 @@
+FROM maven:3
+
+MAINTAINER Florian Lopes <florian.lopes@outlook.com>
+
+WORKDIR /app
+
+ADD ./tmp/build /app
+
+ENTRYPOINT java -jar codeship-spring-boot-example.jar
