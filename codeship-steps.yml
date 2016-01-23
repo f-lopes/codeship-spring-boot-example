@@ -2,7 +2,7 @@
   tag: master
   service: springboot_example_build
   command: mvn clean package
-- name: build
+- name: dist
   tag: master
   service: springboot_example_dist
   command: java -jar codeship-spring-boot-example.jar
