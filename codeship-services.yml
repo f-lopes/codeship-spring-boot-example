@@ -1,8 +1,12 @@
+build_data:
+  image: busybox
+  volumes:
+    - ./tmp:/build
 springboot_example_build:
   build:
     dockerfile_path: Dockerfile.build
-  volumes:
-    - ./tmp:/build
+  volumes_from:
+    - build_data
 springboot_example_dist:
   build:
     dockerfile_path: Dockerfile.dist
