@@ -2,6 +2,8 @@ FROM maven:3
 
 MAINTAINER Florian Lopes <florian.lopes@outlook.com>
 
+RUN mkdir -p /build
+
 COPY pom.xml ./
 
 # Install needed tests dependencies, enable Docker to cache dependencies
