@@ -4,6 +4,6 @@ MAINTAINER Florian Lopes <florian.lopes@outlook.com>
 
 WORKDIR /app
 
-ADD ./tmp/codeship-spring-boot-example.jar /app/
+ADD ./tmp/target/codeship-spring-boot-example.jar /app/
 
 ENTRYPOINT java -jar codeship-spring-boot-example.jar
