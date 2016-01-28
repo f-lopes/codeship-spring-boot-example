@@ -2,7 +2,7 @@ FROM maven:3
 
 MAINTAINER Florian Lopes <florian.lopes@outlook.com>
 
-WORKDIR /app
+WORKDIR /build
 
 COPY pom.xml ./
 
