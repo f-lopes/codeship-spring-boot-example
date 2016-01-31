@@ -9,6 +9,9 @@ COPY pom.xml ./
 # Install needed tests dependencies, enable Docker to cache dependencies
 RUN mvn install clean --fail-never -B -DfailIfNoTests=false
 
+RUN ls /build
+RUN ls 
+
 COPY . /build/
 
 WORKDIR /build
